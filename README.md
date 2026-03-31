@@ -53,7 +53,7 @@ ArcheryEdge aims to bridge that gap by combining computer vision and on-device A
 | Edge compute | NVIDIA Jetson Orin Nano Super (8GB) |
 | Cameras | Dual CSI cameras (stereo configuration) |
 | Mount | Custom stereo rig with fixed baseline |
-| Display | HDMI monitor or remote SSH / VNC |
+| Display | HDMI/DP monitor or remote SSH / VNC |
 
 ---
 
@@ -63,11 +63,11 @@ ArcheryEdge aims to bridge that gap by combining computer vision and on-device A
 |-------|-----------|
 | OS | JetPack (Ubuntu-based) |
 | Camera interface | GStreamer + OpenCV (CSI pipeline) |
-| Pose estimation | HRNet / ViTPose |
-| Keypoint smoothing | 1€ filter |
+| Pose estimation | HRNet / ViTPose / Mediapipe / Yolo11-pose |
+| Keypoint smoothing | 1€ filter / Kalman filter |
 | Stereo calibration | OpenCV — ChArUco-based intrinsic + stereo extrinsic |
 | Vector database | ChromaDB |
-| Local LLM | Qwen2.5-3B (on-device inference) |
+| Local LLM | Qwen2.5-3B / Gemma-4B (on-device inference) |
 | Knowledge ingestion | Gemini API (offline pipeline) |
 | Language | Python |
 
@@ -85,7 +85,7 @@ Stereo calibration is performed offline before deployment using a ChArUco board 
 
 ### 2. Pose Estimation
 
-- Each frame from both cameras is processed through HRNet or ViTPose to extract 2D body keypoints
+- Each frame from both cameras is processed through MediaPipe, Yolo, HRNet or ViTPose to extract 2D body keypoints
 - The **1€ filter** is applied per keypoint to smooth temporal jitter without introducing lag — critical for real-time feedback on fast movements like the draw and release
 - Stereo triangulation reconstructs 3D joint positions from the calibrated camera pair
 
@@ -113,7 +113,7 @@ At inference time:
 | 2D pose estimation (development) | ✅ Complete (Mac) |
 | 1€ filter integration | ✅ Complete |
 | Knowledge ingestion pipeline | ✅ Complete |
-| ChromaDB RAG pipeline | ✅ Complete |
+| ChromaDB RAG pipeline | 🔄 In progress |
 | Qwen2.5-3B local inference | ✅ Complete |
 | Jetson hardware deployment | 🔄 In progress |
 | 3D stereo reconstruction | 🔄 In progress |
