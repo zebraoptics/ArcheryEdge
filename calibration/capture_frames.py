@@ -117,103 +117,9 @@ class StereoCaptureBase(abc.ABC):
         self.close()
 
 
-# ─────────────────────────────────────────────
-# Backend 1 — Mac / USB webcams
-# ─────────────────────────────────────────────
-
-class MacStereoCapture(StereoCaptureBase):
-    """
-    Two webcams via OpenCV VideoCapture.
-
-    On a MacBook with one built-in camera plus one USB camera:
-      camera_index_left=0   → built-in FaceTime HD (treat as "left")
-      camera_index_right=1  → USB webcam (treat as "right")
-
-    For two USB cameras, try indices 0,1 or 1,2 depending on
-    the order macOS enumerates them.
-
-    Sync note
-    ---------
-    Software sync only — reads are sequential, not simultaneous.
-    Typical inter-frame gap is 5–15 ms at 30 fps, which introduces
-    a small stereo baseline temporal error. Acceptable for development
-    and slow movements; replace with Jetson hardware sync for production.
-    """
-
-    def __init__(
-        self,
-        config: CameraConfig,
-        camera_index_left: int = 0,
-        camera_index_right: int = 1,
-    ):
-        super().__init__(config)
-        self._idx_l = camera_index_left
-        self._idx_r = camera_index_right
-        self._cap_l: Optional[cv2.VideoCapture] = None
-        self._cap_r: Optional[cv2.VideoCapture] = None
-
-    def _configure_cap(self, cap: cv2.VideoCapture, label: str) -> None:
-        cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.config.width)
-        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.config.height)
-        cap.set(cv2.CAP_PROP_FPS, self.config.fps)
-        # Read back actual values — webcams may not honour exact requests
-        w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-        h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-        fps = cap.get(cv2.CAP_PROP_FPS)
-        log.info("%s camera: %dx%d @ %.1f fps", label, w, h, fps)
-
-    def open(self) -> bool:
-        log.info("Opening Mac webcams (L=%d, R=%d)", self._idx_l, self._idx_r)
-        self._cap_l = cv2.VideoCapture(self._idx_l)
-        self._cap_r = cv2.VideoCapture(self._idx_r)
-
-        if not self._cap_l.isOpened():
-            log.error("Could not open left camera (index %d)", self._idx_l)
-            return False
-        if not self._cap_r.isOpened():
-            log.error(
-                "Could not open right camera (index %d). "
-                "Is a second webcam connected?",
-                self._idx_r,
-            )
-            return False
-
-        self._configure_cap(self._cap_l, "Left")
-        self._configure_cap(self._cap_r, "Right")
-
-        # Warm up: drain a few frames so auto-exposure settles
-        log.info("Warming up cameras (10 frames)…")
-        for _ in range(10):
-            self._cap_l.read()
-            self._cap_r.read()
-
-        self._opened = True
-        return True
-
-    def read(self) -> FramePair:
-        ts = time.monotonic()
-        ok_l, frame_l = self._cap_l.read()
-        ok_r, frame_r = self._cap_r.read()
-        return FramePair(
-            left=frame_l if ok_l else None,
-            right=frame_r if ok_r else None,
-            timestamp=ts,
-        )
-
-    def close(self) -> None:
-        if self._cap_l:
-            self._cap_l.release()
-        if self._cap_r:
-            self._cap_r.release()
-        log.info("Mac cameras released")
-
-    @property
-    def is_synced(self) -> bool:
-        return False  # software sync only
-
 
 # ─────────────────────────────────────────────
-# Backend 2 — Jetson CSI cameras (GStreamer)
+# Jetson CSI cameras (GStreamer)
 # ─────────────────────────────────────────────
 
 class JetsonCSIStereoCapture(StereoCaptureBase):
@@ -226,15 +132,14 @@ class JetsonCSIStereoCapture(StereoCaptureBase):
 
     Sensor IDs
     ----------
-    sensor_id=0 → CSI connector J13 (usually left)
-    sensor_id=1 → CSI connector J14 (usually right)
+    sensor_id=0 → CSI connector CAM0 on Jetson Orin Nano Super developer's kit
+    sensor_id=1 → CSI connector CAM1 on Jetson Orin Nano Super developer's kit
 
     Sync note
     ---------
     nvarguscamerasrc does NOT hardware-sync two sensors by default.
     For production, wire a GPIO trigger to both camera modules'
     XVS (vertical sync) pin and enable sync mode in the ISP.
-    Until then, this provides the same software-level sync as Mac.
 
     Flip
     ----
