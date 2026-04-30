@@ -1,0 +1,661 @@
+{
+  "source_video": {
+    "title": "Recurve Archery - The Draw",
+    "url": "https://www.youtube.com/watch?v=hikR4N_qfD4&list=PLnGbQXzYstgG99o2VXblMr-lzHS38f2oV",
+    "coach_name": "Fivics Archery",
+    "discipline": "recurve",
+    "skill_level_target": "all"
+  },
+  "entries": [
+    {
+      "id": "rec_setup_bow_shoulder_high_001",
+      "phase": "setup",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_shoulder"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "High Bow Shoulder",
+      "description": "Shrugging the bow shoulder up creates tension, reduces stability, and can lead to inconsistent aiming and release.",
+      "root_causes": [
+        "Tension",
+        "Improper muscle activation",
+        "Poor setup"
+      ],
+      "observable_signs": [
+        "Bow shoulder visibly elevated towards the ear",
+        "Bow arm appears shortened"
+      ],
+      "coaching_cues": [
+        "Push your shoulder down",
+        "Relax your bow shoulder",
+        "Feel your shoulder blade drop"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Leads to vertical stringing, inconsistent aim, and potential for premature release due to tension.",
+      "related_entries": [],
+      "embed_text": "setup draw bow_shoulder high bow shoulder tension stability vertical stringing inconsistent aim push shoulder down relax shoulder blade drop"
+    },
+    {
+      "id": "rec_draw_bow_arm_hyperextension_002",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_elbow"
+      ],
+      "metric": {
+        "name": "bow_arm_extension_angle",
+        "observable_range": [
+          181,
+          190
+        ],
+        "ideal_range": [
+          170,
+          180
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Bow Arm Hyperextension",
+      "description": "Hyperextending the bow elbow locks the joint, creating a rigid structure that absorbs shock poorly and can lead to joint injury or string slap. Estimated ranges.",
+      "root_causes": [
+        "Over-straightening",
+        "Lack of awareness",
+        "Trying to reach further"
+      ],
+      "observable_signs": [
+        "Elbow joint visibly pushed past straight",
+        "Arm appears locked"
+      ],
+      "coaching_cues": [
+        "Soft elbow",
+        "Don't lock your elbow",
+        "Keep a micro-bend",
+        "Let your elbow float"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Can cause string slap, inconsistent bow torque, and potential for elbow injury, leading to erratic arrow flight.",
+      "related_entries": [],
+      "embed_text": "setup draw anchor aim bow_elbow bow_arm_extension_angle hyperextension string slap joint injury soft elbow micro-bend erratic arrow flight"
+    },
+    {
+      "id": "rec_draw_bow_arm_bent_003",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_elbow"
+      ],
+      "metric": {
+        "name": "bow_arm_extension_angle",
+        "observable_range": [
+          120,
+          160
+        ],
+        "ideal_range": [
+          170,
+          180
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Bent Bow Arm",
+      "description": "A significantly bent bow arm reduces the effective draw length, creates instability, and makes it harder to align the shot consistently. Estimated ranges.",
+      "root_causes": [
+        "Weakness",
+        "Fear of string slap",
+        "Poor form habit"
+      ],
+      "observable_signs": [
+        "Elbow joint visibly bent",
+        "Bow arm appears shortened",
+        "Bow hand closer to the body"
+      ],
+      "coaching_cues": [
+        "Straighten your bow arm",
+        "Push through your bow hand",
+        "Extend to the target"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Reduces power, causes inconsistent draw length, and leads to horizontal stringing or low shots.",
+      "related_entries": [],
+      "embed_text": "setup draw anchor aim bow_elbow bow_arm_extension_angle bent bow arm reduced draw length instability horizontal stringing straighten bow arm push through bow hand"
+    },
+    {
+      "id": "rec_release_bow_grip_pressure_004",
+      "phase": "release",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_wrist",
+        "bow_hand"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Excessive Bow Grip Pressure",
+      "description": "Squeezing the bow causes torque, which twists the bow and leads to inconsistent arrow flight and poor follow-through.",
+      "root_causes": [
+        "Tension",
+        "Fear of dropping the bow",
+        "Habit"
+      ],
+      "observable_signs": [
+        "Fingers tightly wrapped around the grip",
+        "Knuckles white",
+        "Wrist appears stiff or torqued"
+      ],
+      "coaching_cues": [
+        "Relax your bow hand",
+        "Let the bow sit in your palm",
+        "Use a sling, not a death grip",
+        "Fingers loose"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "high",
+      "score_impact": "Major cause of horizontal stringing and inconsistent left/right arrow placement.",
+      "related_entries": [],
+      "embed_text": "setup draw anchor aim release bow_wrist bow_hand excessive bow grip pressure torque inconsistent arrow flight horizontal stringing relax bow hand fingers loose"
+    },
+    {
+      "id": "rec_draw_draw_wrist_bent_005",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_wrist",
+        "draw_hand"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Bent Draw Wrist",
+      "description": "Bending or flicking the draw wrist introduces inconsistency in the string release, causing torque and affecting arrow flight.",
+      "root_causes": [
+        "Tension",
+        "Poor finger placement",
+        "Trying to 'help' the release"
+      ],
+      "observable_signs": [
+        "Draw wrist visibly bent inwards or outwards",
+        "Fingers not aligned with the forearm",
+        "Hand appears 'flicked'"
+      ],
+      "coaching_cues": [
+        "Straight wrist",
+        "Relax your wrist",
+        "Let the string pull your fingers",
+        "Keep your hand flat"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "high",
+      "score_impact": "Leads to inconsistent horizontal grouping, causing arrows to fly left or right of the target.",
+      "related_entries": [],
+      "embed_text": "draw anchor aim draw_wrist draw_hand bent draw wrist flicked wrist inconsistent release horizontal grouping straight wrist relax wrist"
+    },
+    {
+      "id": "rec_draw_draw_elbow_high_006",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "High Draw Elbow",
+      "description": "A draw elbow that is too high breaks the alignment of the drawing arm and shoulder, preventing proper back tension engagement and creating an unstable anchor.",
+      "root_causes": [
+        "Shrugging the shoulder",
+        "Trying to 'muscle' the draw",
+        "Poor setup"
+      ],
+      "observable_signs": [
+        "Draw elbow visibly above the line of the arrow",
+        "Draw shoulder elevated"
+      ],
+      "coaching_cues": [
+        "Drop your elbow",
+        "Elbow in line with the arrow",
+        "Use your back muscles",
+        "Shoulder down and back"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Reduces power, causes inconsistent anchor, and leads to vertical stringing or high shots.",
+      "related_entries": [],
+      "embed_text": "draw anchor aim draw_elbow draw_shoulder high draw elbow back tension unstable anchor vertical stringing drop elbow elbow in line with arrow"
+    },
+    {
+      "id": "rec_draw_draw_elbow_low_007",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Low Draw Elbow",
+      "description": "A draw elbow that is too low prevents full engagement of the back muscles, leading to a weak draw, inconsistent anchor, and reliance on arm muscles.",
+      "root_causes": [
+        "Over-rotation of the shoulder",
+        "Trying to avoid string contact",
+        "Poor muscle activation"
+      ],
+      "observable_signs": [
+        "Draw elbow visibly below the line of the arrow",
+        "Draw shoulder appears rotated forward"
+      ],
+      "coaching_cues": [
+        "Lift your elbow",
+        "Elbow in line with the arrow",
+        "Feel your shoulder blade",
+        "Rotate your elbow back"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Reduces power, causes inconsistent anchor, and leads to vertical stringing or low shots.",
+      "related_entries": [],
+      "embed_text": "draw anchor aim draw_elbow draw_shoulder low draw elbow weak draw inconsistent anchor vertical stringing lift elbow elbow in line with arrow"
+    },
+    {
+      "id": "rec_draw_arm_drawing_008",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_shoulder",
+        "spine"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Arm Drawing",
+      "description": "Relying on arm muscles (biceps) to draw the bow leads to fatigue, instability, and an inability to achieve a consistent, powerful release.",
+      "root_causes": [
+        "Lack of understanding",
+        "Insufficient strength",
+        "Poor technique"
+      ],
+      "observable_signs": [
+        "Draw elbow collapses or moves forward",
+        "Draw shoulder elevates",
+        "Visible tension in the bicep",
+        "Lack of movement in the shoulder blade"
+      ],
+      "coaching_cues": [
+        "Pull with your back",
+        "Squeeze your shoulder blades together",
+        "Think about pulling your elbow back",
+        "Relax your bicep"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "high",
+      "score_impact": "Causes inconsistent draw length, poor holding, and erratic arrow flight due to arm fatigue and inconsistent release.",
+      "related_entries": [],
+      "embed_text": "draw anchor aim draw_shoulder spine back tension arm drawing fatigue instability erratic arrow flight pull with back squeeze shoulder blades"
+    },
+    {
+      "id": "rec_aim_draw_shoulder_collapse_009",
+      "phase": "aim",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_shoulder",
+        "draw_elbow"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Draw Shoulder Collapse/Creep",
+      "description": "Allowing the draw shoulder to move forward or 'creep' during the aim phase reduces draw length and back tension, leading to a weak and inconsistent release.",
+      "root_causes": [
+        "Lack of back tension",
+        "Fatigue",
+        "Anticipation of release"
+      ],
+      "observable_signs": [
+        "Draw elbow moves forward",
+        "Draw shoulder visibly shifts towards the target",
+        "String hand moves away from anchor point"
+      ],
+      "coaching_cues": [
+        "Hold your back tension",
+        "Keep pulling through the shot",
+        "Don't let your elbow creep forward",
+        "Stay strong in your back"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "high",
+      "score_impact": "Major cause of low shots and inconsistent vertical grouping due to reduced power and varying draw length.",
+      "related_entries": [],
+      "embed_text": "aim draw_shoulder draw_elbow draw shoulder collapse creep reduced draw length weak release low shots inconsistent vertical grouping hold back tension"
+    },
+    {
+      "id": "rec_setup_head_tilt_010",
+      "phase": "setup",
+      "category": "technique_error",
+      "joints_involved": [
+        "head",
+        "spine"
+      ],
+      "metric": {
+        "name": "head_tilt",
+        "observable_range": [
+          5,
+          20
+        ],
+        "ideal_range": [
+          0,
+          3
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_frontal"
+      },
+      "error_name": "Head Tilt",
+      "description": "Tilting the head changes the anchor point and eye alignment, leading to inconsistent aiming and difficulty in maintaining a stable sight picture. Estimated ranges.",
+      "root_causes": [
+        "Habit",
+        "Trying to get a better sight picture",
+        "Discomfort"
+      ],
+      "observable_signs": [
+        "Head visibly tilted to the side (towards or away from the string)",
+        "Chin not level"
+      ],
+      "coaching_cues": [
+        "Keep your head level",
+        "Look straight ahead",
+        "Chin parallel to the ground",
+        "Don't tilt your head"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Causes inconsistent vertical and horizontal grouping due to a shifting anchor and sight picture.",
+      "related_entries": [],
+      "embed_text": "setup draw anchor aim head spine head_tilt head tilt inconsistent aiming unstable sight picture head level chin parallel"
+    },
+    {
+      "id": "rec_setup_spine_forward_lean_011",
+      "phase": "setup",
+      "category": "technique_error",
+      "joints_involved": [
+        "spine",
+        "hip",
+        "knee"
+      ],
+      "metric": {
+        "name": "spine_forward_lean",
+        "observable_range": [
+          5,
+          15
+        ],
+        "ideal_range": [
+          -3,
+          3
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Excessive Forward Lean",
+      "description": "Leaning excessively forward shifts the archer's center of gravity, reducing stability and making it harder to maintain a consistent hold and follow-through. Estimated ranges.",
+      "root_causes": [
+        "Trying to compensate for draw weight",
+        "Poor stance",
+        "Habit"
+      ],
+      "observable_signs": [
+        "Torso visibly angled forward from the hips",
+        "Archer appears to be 'falling' into the shot"
+      ],
+      "coaching_cues": [
+        "Stand tall",
+        "Engage your core",
+        "Distribute your weight evenly",
+        "Maintain a vertical spine"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Leads to inconsistent vertical grouping, especially low shots, and difficulty in holding steady.",
+      "related_entries": [],
+      "embed_text": "setup draw anchor aim spine hip knee spine_forward_lean excessive forward lean reduced stability inconsistent vertical grouping stand tall engage core vertical spine"
+    },
+    {
+      "id": "rec_setup_spine_lateral_tilt_012",
+      "phase": "setup",
+      "category": "technique_error",
+      "joints_involved": [
+        "spine",
+        "hip"
+      ],
+      "metric": {
+        "name": "spine_lateral_tilt",
+        "observable_range": [
+          3,
+          10
+        ],
+        "ideal_range": [
+          -2,
+          2
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_frontal"
+      },
+      "error_name": "Lateral Spine Tilt",
+      "description": "Tilting the spine laterally shifts the archer's center of gravity and changes the alignment of the bow and draw arm, leading to inconsistent aiming. Estimated ranges.",
+      "root_causes": [
+        "Compensating for bow arm position",
+        "Poor stance",
+        "Habit"
+      ],
+      "observable_signs": [
+        "Torso visibly angled to the left or right",
+        "One shoulder significantly higher than the other (not due to draw, but body tilt)"
+      ],
+      "coaching_cues": [
+        "Keep your shoulders level",
+        "Stand straight",
+        "Feel balanced",
+        "No leaning"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Causes inconsistent horizontal grouping and difficulty in finding a consistent anchor point.",
+      "related_entries": [],
+      "embed_text": "setup draw anchor aim spine hip spine_lateral_tilt lateral spine tilt inconsistent aiming horizontal grouping shoulders level stand straight"
+    },
+    {
+      "id": "rec_draw_draw_shoulder_rise_013",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "draw_shoulder_rise",
+        "observable_range": [
+          10,
+          30
+        ],
+        "ideal_range": [
+          0,
+          5
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Excessive Draw Shoulder Rise",
+      "description": "Shrugging the draw shoulder upwards during the draw creates tension, inhibits proper back muscle engagement, and leads to an unstable anchor and inconsistent release. Estimated ranges.",
+      "root_causes": [
+        "Muscling the draw",
+        "Lack of back tension",
+        "Poor setup"
+      ],
+      "observable_signs": [
+        "Draw shoulder visibly elevates towards the ear as the string is pulled",
+        "Neck appears shortened"
+      ],
+      "coaching_cues": [
+        "Keep your shoulder down",
+        "Relax your neck",
+        "Pull with your back, not your shoulder",
+        "Shoulder blade down and back"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "high",
+      "score_impact": "Causes inconsistent vertical grouping, high shots, and premature release due to tension.",
+      "related_entries": [
+        "rec_draw_arm_drawing_008"
+      ],
+      "embed_text": "draw draw_shoulder draw_shoulder_rise excessive draw shoulder rise tension unstable anchor inconsistent release vertical grouping shoulder down relax neck pull with back"
+    },
+    {
+      "id": "rec_anchor_anchor_point_consistency_014",
+      "phase": "anchor",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_hand",
+        "head"
+      ],
+      "metric": {
+        "name": "anchor_point_consistency",
+        "observable_range": [
+          5,
+          20
+        ],
+        "ideal_range": [
+          0,
+          2
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Inconsistent Anchor Point",
+      "description": "Variations in the anchor point directly change the archer's sight picture and draw length, making consistent aiming impossible. Estimated ranges.",
+      "root_causes": [
+        "Rushing the shot",
+        "Lack of focus",
+        "Poor muscle memory",
+        "Head movement"
+      ],
+      "observable_signs": [
+        "Draw hand position varies relative to the jaw/chin across multiple shots",
+        "Head position changes"
+      ],
+      "coaching_cues": [
+        "Feel the same spot every time",
+        "Slow down your anchor",
+        "Solid contact",
+        "Don't move your head"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "high",
+      "score_impact": "The primary cause of inconsistent grouping, both vertical and horizontal, making accurate shooting impossible.",
+      "related_entries": [
+        "rec_setup_head_tilt_010"
+      ],
+      "embed_text": "anchor draw_hand head anchor_point_consistency inconsistent anchor point sight picture draw length inconsistent grouping feel same spot solid contact"
+    }
+  ]
+}

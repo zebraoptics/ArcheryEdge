@@ -1,0 +1,514 @@
+{
+  "source_video": {
+    "title": "Recurve Archery - Back Tension - The Release",
+    "url": "https://www.youtube.com/watch?v=mywtm2iXxfo&list=PLnGbQXzYstgG99o2VXblMr-lzHS38f2oV&index=8",
+    "coach_name": "Fivics Archery",
+    "discipline": "recurve",
+    "skill_level_target": "intermediate"
+  },
+  "entries": [
+    {
+      "id": "rec_draw_backtension_principle_001",
+      "phase": "draw",
+      "category": "principle",
+      "joints_involved": [
+        "draw_shoulder",
+        "draw_elbow"
+      ],
+      "metric": {
+        "name": "draw_shoulder_height_diff",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Back tension principle",
+      "description": "Back tension involves engaging the muscles between the shoulder blades to expand the back, rather than just pulling with the arm muscles. This creates a stable and powerful draw.",
+      "root_causes": [],
+      "observable_signs": [
+        "Consistent rearward movement of the draw shoulder and elbow during the draw and aim phases, indicating engagement of back muscles."
+      ],
+      "coaching_cues": [
+        "Expand your back.",
+        "Squeeze your shoulder blades together.",
+        "Pull with your back, not your arm."
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "low",
+      "score_impact": "Improves shot consistency and power, leading to tighter groups and better arrow flight.",
+      "related_entries": [
+        "rec_draw_shoulder_engagement_001",
+        "rec_release_passive_001"
+      ],
+      "embed_text": "draw draw_shoulder draw_elbow back tension principle expand back squeeze shoulder blades pull with back improves shot consistency power tighter groups"
+    },
+    {
+      "id": "rec_draw_elbow_low_001",
+      "phase": "anchor",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "draw_elbow_angle",
+        "observable_range": [
+          90,
+          120
+        ],
+        "ideal_range": [
+          150,
+          170
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Dropped draw elbow",
+      "description": "The draw elbow is positioned too low or too far forward at full draw, indicating a lack of proper back tension and engagement of the shoulder blade muscles (estimated ranges). This weakens the shot.",
+      "root_causes": [
+        "Over-reliance on arm muscles",
+        "Lack of back muscle engagement",
+        "Poor body alignment"
+      ],
+      "observable_signs": [
+        "Draw elbow angle is significantly less than ideal at anchor",
+        "Draw shoulder appears higher than bow shoulder"
+      ],
+      "coaching_cues": [
+        "Elbow up and back.",
+        "Get your elbow behind the arrow.",
+        "Feel your shoulder blade."
+      ],
+      "drill": {
+        "name": "Resistance Band Pulls",
+        "description": "Using a resistance band, practice pulling to anchor with a high, back elbow, focusing on squeezing the shoulder blades. Hold for 3-5 seconds.",
+        "reps": 10,
+        "focus_metric": "draw_elbow_angle"
+      },
+      "severity": "medium",
+      "score_impact": "Reduces power and consistency, leading to vertical stringing and inconsistent anchor points.",
+      "related_entries": [
+        "rec_draw_backtension_principle_001",
+        "rec_draw_shoulder_engagement_001"
+      ],
+      "embed_text": "anchor draw_elbow draw_shoulder draw_elbow_angle dropped draw elbow low elbow forward lack back tension over-reliance arm muscles elbow up back resistance band pulls reduces power consistency vertical stringing"
+    },
+    {
+      "id": "rec_followthrough_handpath_001",
+      "phase": "follow_through",
+      "category": "technique_cue",
+      "joints_involved": [
+        "draw_hand",
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "anchor_point_consistency",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Straight back follow-through",
+      "description": "After release, the string hand should move straight back along the jawline, as if \"painting the face,\" indicating a passive and consistent release driven by back tension.",
+      "root_causes": [],
+      "observable_signs": [
+        "Draw hand path moves directly rearward along the face/jawline post-release",
+        "Draw elbow moves rearward and slightly outward"
+      ],
+      "coaching_cues": [
+        "Paint your face.",
+        "Hand straight back.",
+        "Let the string rip."
+      ],
+      "drill": {
+        "name": "Mirror Follow-Through",
+        "description": "Practice releases in front of a mirror, focusing on the string hand moving straight back along the jawline without dropping or moving sideways.",
+        "reps": 15,
+        "focus_metric": "anchor_point_consistency"
+      },
+      "severity": "low",
+      "score_impact": "Ensures a clean string clearance and consistent shot execution, improving horizontal grouping.",
+      "related_entries": [
+        "rec_release_passive_001",
+        "rec_followthrough_handpath_error_001"
+      ],
+      "embed_text": "follow_through draw_hand draw_elbow draw_shoulder straight back follow-through paint face hand straight back passive consistent release clean string clearance consistent shot execution horizontal grouping"
+    },
+    {
+      "id": "rec_followthrough_handpath_error_001",
+      "phase": "follow_through",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_hand",
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "anchor_point_consistency",
+        "observable_range": [
+          5,
+          20
+        ],
+        "ideal_range": [
+          0,
+          2
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Errant follow-through path",
+      "description": "The string hand moves out to the side, down, or away from the face after release, indicating an active release, plucking the string, or a collapse of back tension (estimated ranges).",
+      "root_causes": [
+        "Active string hand release",
+        "Lack of back tension",
+        "Anticipation of shot"
+      ],
+      "observable_signs": [
+        "Draw hand path deviates laterally or vertically from the jawline post-release",
+        "Draw elbow drops or moves sideways"
+      ],
+      "coaching_cues": [
+        "Stay on your face.",
+        "Don't pluck the string.",
+        "Let it go straight back."
+      ],
+      "drill": {
+        "name": "Wall Drill Follow-Through",
+        "description": "Stand with your back to a wall, simulating a shot. The string hand should brush the wall as it moves straight back, preventing lateral or downward movement.",
+        "reps": 10,
+        "focus_metric": "anchor_point_consistency"
+      },
+      "severity": "medium",
+      "score_impact": "Causes inconsistent string clearance and shot execution, leading to erratic arrow flight and poor grouping.",
+      "related_entries": [
+        "rec_release_passive_001",
+        "rec_followthrough_handpath_001"
+      ],
+      "embed_text": "follow_through draw_hand draw_elbow draw_shoulder anchor_point_consistency errant follow-through path hand out side down active release plucking string lack back tension stay on face wall drill follow-through inconsistent string clearance erratic arrow flight poor grouping"
+    },
+    {
+      "id": "rec_release_passive_001",
+      "phase": "release",
+      "category": "technique_cue",
+      "joints_involved": [
+        "draw_hand",
+        "draw_wrist",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "follow_through_duration",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "seconds",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Passive string release",
+      "description": "The release should be passive, allowing the string to \"rip\" out of the fingers as the back tension continues to pull, rather than actively opening the fingers. This ensures a clean and consistent shot.",
+      "root_causes": [],
+      "observable_signs": [
+        "Minimal active finger movement at release point",
+        "Continuous rearward movement of draw hand/shoulder through release"
+      ],
+      "coaching_cues": [
+        "Let the string rip.",
+        "Don't open your fingers.",
+        "Keep pulling through."
+      ],
+      "drill": {
+        "name": "Finger Sling Drill",
+        "description": "Use a finger sling to hold the bow, allowing the hand to relax completely at release. Focus on the string pulling the fingers open, not actively opening them.",
+        "reps": 15,
+        "focus_metric": "follow_through_duration"
+      },
+      "severity": "low",
+      "score_impact": "Promotes a clean string departure and reduces torque on the string, leading to more consistent arrow flight and tighter groups.",
+      "related_entries": [
+        "rec_draw_backtension_principle_001",
+        "rec_followthrough_handpath_001"
+      ],
+      "embed_text": "release draw_hand draw_wrist draw_shoulder passive string release let string rip don't open fingers keep pulling through finger sling drill clean string departure reduces torque consistent arrow flight tighter groups"
+    },
+    {
+      "id": "rec_bowarm_collapse_001",
+      "phase": "release",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_elbow",
+        "bow_shoulder"
+      ],
+      "metric": {
+        "name": "bow_arm_extension_angle",
+        "observable_range": [
+          160,
+          175
+        ],
+        "ideal_range": [
+          178,
+          180
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Bow arm collapse",
+      "description": "The bow arm bends or drops immediately after release, absorbing energy and causing inconsistent bow movement, which negatively impacts arrow flight (estimated ranges).",
+      "root_causes": [
+        "Anticipation of recoil",
+        "Lack of bow arm strength/stability",
+        "Over-gripping the bow"
+      ],
+      "observable_signs": [
+        "Bow elbow angle decreases significantly post-release",
+        "Bow shoulder drops or moves forward"
+      ],
+      "coaching_cues": [
+        "Hold your bow arm strong.",
+        "Push through the shot.",
+        "Maintain your form."
+      ],
+      "drill": {
+        "name": "Bow Arm Hold Drill",
+        "description": "After each shot, hold the bow arm perfectly still and extended for 3-5 seconds, focusing on stability and preventing any collapse.",
+        "reps": 10,
+        "focus_metric": "bow_arm_extension_angle"
+      },
+      "severity": "high",
+      "score_impact": "Causes inconsistent arrow impact points, especially vertically, due to varying bow torque and energy absorption.",
+      "related_entries": [
+        "rec_release_punching_001"
+      ],
+      "embed_text": "release bow_elbow bow_shoulder bow_arm_extension_angle bow arm collapse arm bends drops anticipation recoil hold bow arm strong bow arm hold drill inconsistent arrow impact points vertical stringing"
+    },
+    {
+      "id": "rec_head_movement_001",
+      "phase": "release",
+      "category": "technique_error",
+      "joints_involved": [
+        "head",
+        "spine"
+      ],
+      "metric": {
+        "name": "head_tilt",
+        "observable_range": [
+          5,
+          15
+        ],
+        "ideal_range": [
+          0,
+          2
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_frontal"
+      },
+      "error_name": "Head movement at release",
+      "description": "The archer's head moves or \"peeks\" up/down or sideways immediately after release, indicating anticipation of the shot or a desire to see the arrow fly (estimated ranges). This disrupts aiming stability.",
+      "root_causes": [
+        "Anticipation of shot",
+        "Desire to see arrow flight",
+        "Lack of focus on target"
+      ],
+      "observable_signs": [
+        "Head tilt or rotation changes significantly post-release",
+        "Head position shifts relative to spine"
+      ],
+      "coaching_cues": [
+        "Keep your head still.",
+        "Eyes on the target.",
+        "Don't peek."
+      ],
+      "drill": {
+        "name": "Target Stare Drill",
+        "description": "After releasing the arrow, keep your eyes fixed on the target for 3-5 seconds, resisting the urge to move your head or follow the arrow.",
+        "reps": 10,
+        "focus_metric": "head_tilt"
+      },
+      "severity": "medium",
+      "score_impact": "Causes inconsistent aiming and follow-through, leading to erratic arrow placement, particularly horizontally.",
+      "related_entries": [],
+      "embed_text": "release head spine head_tilt head movement at release peeking anticipation shot keep head still eyes on target target stare drill inconsistent aiming erratic arrow placement horizontal"
+    },
+    {
+      "id": "rec_release_punching_001",
+      "phase": "release",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_shoulder",
+        "bow_elbow"
+      ],
+      "metric": {
+        "name": "bow_arm_extension_angle",
+        "observable_range": [
+          180,
+          185
+        ],
+        "ideal_range": [
+          178,
+          180
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Punching the bow arm",
+      "description": "Actively pushing the bow arm forward or into the shot at release, rather than maintaining a stable, strong position. This creates unnecessary movement and torque (estimated ranges).",
+      "root_causes": [
+        "Active release mechanism",
+        "Attempting to \"help\" the arrow",
+        "Misunderstanding of follow-through"
+      ],
+      "observable_signs": [
+        "Rapid forward movement of the bow shoulder or elbow at release",
+        "Bow arm extension angle momentarily increases beyond ideal"
+      ],
+      "coaching_cues": [
+        "Stay strong, don't push.",
+        "Let the bow do the work.",
+        "Relax your grip."
+      ],
+      "drill": {
+        "name": "Bow Arm Stability Drill",
+        "description": "Focus on maintaining a completely static bow arm from anchor through release and follow-through. Imagine your bow arm is a statue.",
+        "reps": 10,
+        "focus_metric": "bow_arm_extension_angle"
+      },
+      "severity": "high",
+      "score_impact": "Introduces significant torque and inconsistent forces into the shot, leading to wide groups and unpredictable arrow flight.",
+      "related_entries": [
+        "rec_bowarm_collapse_001"
+      ],
+      "embed_text": "release bow_shoulder bow_elbow bow_arm_extension_angle punching the bow arm actively pushing bow arm forward active release stay strong don't push bow arm stability drill significant torque inconsistent forces wide groups unpredictable arrow flight"
+    },
+    {
+      "id": "rec_drill_blindbailing_001",
+      "phase": "aim",
+      "category": "drill",
+      "joints_involved": [
+        "draw_shoulder",
+        "draw_elbow",
+        "draw_hand"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Blind bailing drill",
+      "description": "Shooting at a blank bale from a very close distance (e.g., 3-5 meters) without aiming or with eyes closed. This drill helps archers focus purely on the feel of their shot execution and back tension, removing visual distractions.",
+      "root_causes": [],
+      "observable_signs": [
+        "Consistent draw shoulder movement",
+        "Stable draw elbow position",
+        "Smooth follow-through"
+      ],
+      "coaching_cues": [
+        "Feel the shot.",
+        "Focus on your back.",
+        "Trust your form."
+      ],
+      "drill": {
+        "name": "Blind Bailing",
+        "description": "Shoot arrows into a blank bale from 3-5 meters, either with eyes closed or looking away. Concentrate solely on the physical sensation of a good draw, anchor, and release.",
+        "reps": 20,
+        "focus_metric": "draw_shoulder_height_diff"
+      },
+      "severity": "low",
+      "score_impact": "Improves proprioception and muscle memory for consistent shot execution, leading to better form and reduced target panic.",
+      "related_entries": [
+        "rec_draw_backtension_principle_001",
+        "rec_release_passive_001"
+      ],
+      "embed_text": "aim draw_shoulder draw_elbow draw_hand blind bailing drill blank bale close distance no aiming feel shot execution back tension proprioception muscle memory consistent shot execution reduced target panic"
+    },
+    {
+      "id": "rec_drill_clicker_001",
+      "phase": "aim",
+      "category": "drill",
+      "joints_involved": [
+        "draw_shoulder",
+        "draw_elbow"
+      ],
+      "metric": {
+        "name": "draw_shoulder_rise",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Clicker drill",
+      "description": "A drill where the archer focuses on continuing to pull through the clicker, using back tension, rather than stopping or anticipating the click. This reinforces a continuous, active draw.",
+      "root_causes": [],
+      "observable_signs": [
+        "Continuous rearward movement of the draw shoulder and elbow until the clicker sounds",
+        "Minimal pause at full draw before release"
+      ],
+      "coaching_cues": [
+        "Pull through the clicker.",
+        "Don't stop pulling.",
+        "Let the clicker surprise you."
+      ],
+      "drill": {
+        "name": "Clicker Drill",
+        "description": "At full draw, focus on maintaining continuous back tension and pulling through the clicker until it drops. Avoid stopping or \"waiting\" for the click.",
+        "reps": 15,
+        "focus_metric": "draw_shoulder_height_diff"
+      },
+      "severity": "low",
+      "score_impact": "Develops a consistent and active release sequence, preventing target panic and improving shot timing and consistency.",
+      "related_entries": [
+        "rec_draw_backtension_principle_001",
+        "rec_release_passive_001"
+      ],
+      "embed_text": "aim draw_shoulder draw_elbow clicker drill pull through clicker continuous active draw consistent rearward movement draw shoulder minimal pause full draw develop consistent active release sequence prevent target panic improve shot timing consistency"
+    },
+    {
+      "id": "rec_draw_shoulder_engagement_001",
+      "phase": "draw",
+      "category": "technique_cue",
+      "joints_involved": [
+        "draw_shoulder",
+        "spine"
+      ],
+      "metric": {
+        "name": "draw_shoulder_height_diff",
+        "observable_range": [],
+        "ideal_range": [
+          -10,
+          10
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Engage shoulder blades",
+      "description": "Actively engaging and squeezing the shoulder blades together during the draw and anchor phases helps to properly load the back muscles and stabilize the upper body. This prevents shoulder rise and promotes a strong, consistent draw (estimated range).",
+      "root_causes": [],
+      "observable_signs": [
+        "Draw shoulder moves rearward and slightly downward relative to the bow shoulder",
+        "Reduced draw_shoulder_rise from setup to anchor"
+      ],
+      "coaching_cues": [
+        "Squeeze your shoulder blades.",
+        "Open your chest.",
+        "Pull your shoulder down and back."
+      ],
+      "drill": {
+        "name": "Scapular Retraction Holds",
+        "description": "Without the bow, practice squeezing your shoulder blades together and holding for 5-10 seconds. Focus on feeling the muscles engage.",
+        "reps": 10,
+        "focus_metric": "draw_shoulder_height_diff"
+      },
+      "severity": "low",
+      "score_impact": "Improves draw stability, reduces shoulder fatigue, and contributes to a more consistent anchor and release, enhancing overall accuracy.",
+      "related_entries": [
+        "rec_draw_backtension_principle_001",
+        "rec_draw_elbow_low_001"
+      ],
+      "embed_text": "draw draw_shoulder spine draw_shoulder_height_diff engage shoulder blades squeeze shoulder blades open chest pull shoulder down back scapular retraction holds improves draw stability reduces shoulder fatigue consistent anchor release overall accuracy"
+    }
+  ]
+}

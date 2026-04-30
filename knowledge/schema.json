@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "description": "ArcheryEdge knowledge base schema — recurve archery coaching chunks extracted from YouTube videos",
+
+  "chunk": {
+    "chunk_id": "string — unique identifier, format: {source_id}_{topic_code}_{index}, e.g. vid001_stance_003",
+    "source": {
+      "video_id": "string — YouTube video ID, e.g. dQw4w9WgXcQ",
+      "video_url": "string — full YouTube URL",
+      "video_title": "string — title of the YouTube video",
+      "channel": "string — YouTube channel name",
+      "timestamp_start": "number — start time in seconds where this tip appears in the video",
+      "timestamp_end": "number — end time in seconds"
+    },
+    "content": {
+      "topic": "string — one of: stance, draw_anchor, grip, aiming, release_followthrough, breathing_focus, equipment, common_mistakes",
+      "subtopic": "string — more specific label, e.g. 'shoulder alignment', 'back tension', 'finger placement'",
+      "skill_level": "string — one of: beginner, intermediate, advanced, all",
+      "style": "string — one of: recurve, compound, traditional, general",
+      "tip": "string — the coaching tip itself, 1-3 sentences, written as direct actionable advice",
+      "mistake_addressed": "string or null — the specific error this tip corrects, if applicable",
+      "keywords": ["array of strings — key terms for retrieval, e.g. elbow, anchor, draw weight"]
+    },
+    "pose_relevance": {
+      "joints_involved": ["array — relevant body joints, e.g. shoulder, elbow, wrist, hip, knee"],
+      "measurable": "boolean — true if this tip can be verified by pose estimation metrics",
+      "metric_hint": "string or null — what to measure, e.g. 'draw elbow angle should be 160-180 degrees', null if not measurable"
+    },
+    "metadata": {
+      "confidence": "number — Gemini confidence score 0.0 to 1.0",
+      "extracted_at": "string — ISO 8601 timestamp of extraction",
+      "gemini_model": "string — Gemini model used for extraction"
+    }
+  },
+
+  "example": {
+    "chunk_id": "vid001_stance_001",
+    "source": {
+      "video_id": "abc123xyz",
+      "video_url": "https://www.youtube.com/watch?v=abc123xyz",
+      "video_title": "Recurve Archery for Beginners — Perfect Stance",
+      "channel": "World Archery",
+      "timestamp_start": 42,
+      "timestamp_end": 58
+    },
+    "content": {
+      "topic": "stance",
+      "subtopic": "foot position",
+      "skill_level": "beginner",
+      "style": "recurve",
+      "tip": "Stand perpendicular to the target with your feet shoulder-width apart, straddling the shooting line. Your weight should be evenly distributed across both feet — avoid leaning forward or backward.",
+      "mistake_addressed": "Uneven weight distribution causing inconsistent arrow grouping",
+      "keywords": ["stance", "foot position", "shooting line", "balance", "perpendicular"]
+    },
+    "pose_relevance": {
+      "joints_involved": ["hip", "knee", "ankle"],
+      "measurable": true,
+      "metric_hint": "Hip-to-ankle vertical alignment should be within 5 degrees of vertical"
+    },
+    "metadata": {
+      "confidence": 0.95,
+      "extracted_at": "2025-03-31T10:00:00Z",
+      "gemini_model": "gemini-2.0-flash"
+    }
+  }
+}

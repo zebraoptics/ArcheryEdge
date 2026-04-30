@@ -1,0 +1,536 @@
+{
+  "source_video": {
+    "title": "Archery Technique: The Draw",
+    "url": "https://www.youtube.com/watch?v=Dp84ZfzQbNs&list=PLVEwAkqBIpYdaupGuYFeecLLcBogen1B9&index=3",
+    "coach_name": "Fivics Archery",
+    "discipline": "recurve",
+    "skill_level_target": "all"
+  },
+  "entries": [
+    {
+      "id": "rec_draw_bow_elbow_hyperextension_001",
+      "phase": "setup",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_elbow"
+      ],
+      "metric": {
+        "name": "bow_arm_extension_angle",
+        "observable_range": [
+          178,
+          185
+        ],
+        "ideal_range": [
+          170,
+          175
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Bow arm hyperextension",
+      "description": "Locking the bow arm elbow can lead to inconsistent arm position, increased tension, and potential injury from string slap or impact shock. (estimated)",
+      "root_causes": [
+        "Over-straightening the arm",
+        "Lack of awareness of elbow rotation"
+      ],
+      "observable_signs": [
+        "Bow arm elbow angle close to or exceeding 180 degrees",
+        "Elbow joint visibly locked or concave"
+      ],
+      "coaching_cues": [
+        "Soft elbow",
+        "Rotate your elbow out",
+        "Don't lock your elbow"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Causes inconsistent bow arm stability and can lead to string slap, resulting in erratic arrow flight and poor grouping.",
+      "related_entries": [
+        "rec_setup_bow_elbow_rotation_002"
+      ],
+      "embed_text": "setup bow_elbow bow_arm_extension_angle 178-185 degrees bow arm hyperextension soft elbow rotate elbow out don't lock elbow inconsistent bow arm stability string slap erratic arrow flight poor grouping"
+    },
+    {
+      "id": "rec_setup_bow_elbow_rotation_002",
+      "phase": "setup",
+      "category": "technique_cue",
+      "joints_involved": [
+        "bow_elbow"
+      ],
+      "metric": {
+        "name": "bow_arm_extension_angle",
+        "observable_range": [
+          0,
+          0
+        ],
+        "ideal_range": [
+          170,
+          175
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_transverse"
+      },
+      "error_name": "Bow arm elbow rotation",
+      "description": "Rotating the bow arm elbow outwards (away from the string) prevents string slap and promotes a more stable and consistent bow hold. (estimated)",
+      "root_causes": [],
+      "observable_signs": [
+        "Elbow joint facing towards the string",
+        "Forearm rotated inwards"
+      ],
+      "coaching_cues": [
+        "Rotate your elbow out",
+        "Point your elbow away from the string",
+        "Soft elbow"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "low",
+      "score_impact": "Improves bow arm stability and prevents string contact, leading to cleaner arrow launch and better accuracy.",
+      "related_entries": [
+        "rec_draw_bow_elbow_hyperextension_001"
+      ],
+      "embed_text": "setup bow_elbow bow_arm_extension_angle bow arm elbow rotation rotate elbow out point elbow away from string soft elbow improves bow arm stability prevents string contact cleaner arrow launch better accuracy"
+    },
+    {
+      "id": "rec_draw_shoulder_rise_003",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_shoulder",
+        "spine"
+      ],
+      "metric": {
+        "name": "draw_shoulder_rise",
+        "observable_range": [
+          10,
+          50
+        ],
+        "ideal_range": [
+          -5,
+          5
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Draw shoulder rise",
+      "description": "Shrugging the draw shoulder during the draw creates unnecessary tension in the neck and upper back, hindering proper back muscle engagement and consistent anchor. (estimated)",
+      "root_causes": [
+        "Using arm muscles instead of back muscles",
+        "Lack of shoulder stability",
+        "Excessive bow weight"
+      ],
+      "observable_signs": [
+        "Draw shoulder height increasing significantly from setup to anchor",
+        "Draw shoulder visibly higher than bow shoulder"
+      ],
+      "coaching_cues": [
+        "Shoulders down",
+        "Relax your shoulders",
+        "Use your back, not your neck"
+      ],
+      "drill": {
+        "name": "Shoulder Shrug Drill",
+        "description": "Practice drawing the bow while consciously keeping the shoulders depressed and relaxed. Focus on initiating the draw with the back muscles, not by shrugging.",
+        "reps": 10,
+        "focus_metric": "draw_shoulder_rise"
+      },
+      "severity": "high",
+      "score_impact": "Leads to increased tension, inconsistent anchor point, and poor release, severely impacting arrow grouping and accuracy.",
+      "related_entries": [
+        "rec_draw_arm_dominant_draw_004"
+      ],
+      "embed_text": "draw draw_shoulder spine draw_shoulder_rise 10-50mm draw shoulder rise shoulders down relax shoulders use your back not your neck increased tension inconsistent anchor poor release poor grouping accuracy"
+    },
+    {
+      "id": "rec_draw_arm_dominant_draw_004",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_shoulder",
+        "draw_elbow",
+        "spine"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Arm-dominant draw",
+      "description": "Initiating and executing the draw primarily with arm muscles (biceps) rather than engaging the back muscles (rhomboids, lats) leads to fatigue, tension, and poor alignment. (principle)",
+      "root_causes": [
+        "Lack of understanding of back tension",
+        "Weak back muscles",
+        "Over-bowing"
+      ],
+      "observable_signs": [
+        "Rapid flexion of the draw_elbow without significant scapular retraction",
+        "Draw shoulder rise",
+        "Lack of smooth, continuous movement"
+      ],
+      "coaching_cues": [
+        "Start with your back",
+        "Think about pulling your elbow back",
+        "Squeeze your shoulder blades together"
+      ],
+      "drill": {
+        "name": "Resistance Band Draw",
+        "description": "Use a resistance band to practice the draw motion, focusing on engaging the back muscles and keeping the shoulders down. Perform slowly, feeling the scapular movement.",
+        "reps": 15,
+        "focus_metric": "draw_shoulder_rise"
+      },
+      "severity": "high",
+      "score_impact": "Causes fatigue, inconsistent draw length, and poor alignment, leading to erratic arrow flight and reduced accuracy.",
+      "related_entries": [
+        "rec_draw_shoulder_rise_003",
+        "rec_draw_back_tension_principle_005"
+      ],
+      "embed_text": "draw draw_shoulder draw_elbow spine arm-dominant draw start with your back pull your elbow back squeeze your shoulder blades fatigue inconsistent draw length poor alignment erratic arrow flight reduced accuracy"
+    },
+    {
+      "id": "rec_draw_back_tension_principle_005",
+      "phase": "draw",
+      "category": "principle",
+      "joints_involved": [
+        "draw_shoulder",
+        "spine"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [],
+        "ideal_range": [],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Back tension engagement",
+      "description": "Engaging the back muscles (rhomboids, lats) throughout the draw and release provides power, stability, and a consistent expansion, which is fundamental for a good shot. (principle)",
+      "root_causes": [],
+      "observable_signs": [
+        "Stable draw_shoulder position (no rise)",
+        "Smooth, continuous draw motion",
+        "Scapular retraction visible"
+      ],
+      "coaching_cues": [
+        "Squeeze your shoulder blades",
+        "Pull with your back",
+        "Expand through the shot"
+      ],
+      "drill": {
+        "name": "Clicker Drill with Back Tension",
+        "description": "Draw the bow to anchor, then use only back muscle expansion to activate the clicker, maintaining a stable bow arm and head position.",
+        "reps": 10,
+        "focus_metric": ""
+      },
+      "severity": "low",
+      "score_impact": "Foundation of a powerful, consistent, and accurate shot, directly impacting arrow grouping and overall performance.",
+      "related_entries": [
+        "rec_draw_arm_dominant_draw_004"
+      ],
+      "embed_text": "draw draw_shoulder spine back tension engagement squeeze your shoulder blades pull with your back expand through the shot powerful consistent accurate shot arrow grouping performance"
+    },
+    {
+      "id": "rec_draw_elbow_drop_006",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "draw_elbow_angle",
+        "observable_range": [
+          110,
+          140
+        ],
+        "ideal_range": [
+          90,
+          100
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Draw elbow drop (chicken wing)",
+      "description": "Dropping the draw elbow below the line of the arrow (chicken wing) reduces back muscle engagement, creates tension, and can lead to inconsistent string clearance. (estimated)",
+      "root_causes": [
+        "Arm-dominant draw",
+        "Lack of back muscle engagement",
+        "Poor shoulder stability"
+      ],
+      "observable_signs": [
+        "Draw elbow angle significantly larger than ideal at full draw",
+        "Draw elbow visibly lower than the arrow line"
+      ],
+      "coaching_cues": [
+        "Elbow high",
+        "Elbow in line with the arrow",
+        "Keep your elbow up"
+      ],
+      "drill": {
+        "name": "Mirror Draw Drill",
+        "description": "Practice drawing in front of a mirror, focusing on keeping the draw elbow high and in line with the arrow. Pay attention to the feeling of back muscle engagement.",
+        "reps": 10,
+        "focus_metric": "draw_elbow_angle"
+      },
+      "severity": "high",
+      "score_impact": "Reduces power, causes inconsistent string clearance, and leads to poor accuracy due to inefficient force transfer.",
+      "related_entries": [
+        "rec_draw_arm_dominant_draw_004"
+      ],
+      "embed_text": "draw draw_elbow draw_shoulder draw_elbow_angle 110-140 degrees draw elbow drop chicken wing elbow high elbow in line with arrow keep your elbow up reduces power inconsistent string clearance poor accuracy"
+    },
+    {
+      "id": "rec_anchor_inconsistent_anchor_007",
+      "phase": "anchor",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_hand",
+        "head"
+      ],
+      "metric": {
+        "name": "anchor_point_consistency",
+        "observable_range": [
+          5,
+          20
+        ],
+        "ideal_range": [
+          0,
+          2
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Inconsistent anchor point",
+      "description": "Variations in the draw hand's position against the face/jaw at full draw lead to inconsistent sight pictures and arrow trajectories. (estimated)",
+      "root_causes": [
+        "Lack of proprioceptive awareness",
+        "Rushing the shot",
+        "Poor draw mechanics"
+      ],
+      "observable_signs": [
+        "High standard deviation of draw_hand position relative to head/jaw across multiple shots",
+        "Visible shifts in draw_hand placement"
+      ],
+      "coaching_cues": [
+        "Touch the same spot every time",
+        "Feel the string on your face",
+        "Solid anchor"
+      ],
+      "drill": {
+        "name": "Blind Bale Anchor Drill",
+        "description": "Shoot at a blank bale from close range, focusing solely on achieving a consistent anchor point without aiming. Close your eyes briefly at full draw to enhance feel.",
+        "reps": 20,
+        "focus_metric": "anchor_point_consistency"
+      },
+      "severity": "high",
+      "score_impact": "The primary cause of horizontal and vertical arrow dispersion, severely impacting grouping and overall accuracy.",
+      "related_entries": [],
+      "embed_text": "anchor draw_hand head anchor_point_consistency 5-20mm inconsistent anchor point touch same spot every time feel string on face solid anchor primary cause horizontal vertical arrow dispersion poor grouping accuracy"
+    },
+    {
+      "id": "rec_aim_spine_lean_008",
+      "phase": "aim",
+      "category": "technique_error",
+      "joints_involved": [
+        "spine",
+        "hip"
+      ],
+      "metric": {
+        "name": "spine_forward_lean",
+        "observable_range": [
+          -10,
+          10
+        ],
+        "ideal_range": [
+          -2,
+          2
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Spine lean (forward/back)",
+      "description": "Leaning the spine significantly forward or backward disrupts the archer's balance and alignment, making it harder to maintain a stable aiming platform. (estimated)",
+      "root_causes": [
+        "Poor stance",
+        "Compensating for bow weight",
+        "Lack of core strength"
+      ],
+      "observable_signs": [
+        "Spine angle deviating more than 5 degrees from vertical",
+        "Visible forward or backward tilt of the torso"
+      ],
+      "coaching_cues": [
+        "Stand tall",
+        "Engage your core",
+        "Vertical spine"
+      ],
+      "drill": {
+        "name": "Plumb Bob Stance Check",
+        "description": "Use a plumb bob or a vertical line on a wall to check your spine alignment during setup and draw. Adjust your stance to keep your spine vertical.",
+        "reps": 0,
+        "focus_metric": "spine_forward_lean"
+      },
+      "severity": "medium",
+      "score_impact": "Leads to poor balance and an unstable aiming platform, causing inconsistent arrow placement, especially vertically.",
+      "related_entries": [],
+      "embed_text": "aim spine hip spine_forward_lean -10-10 degrees spine lean forward back stand tall engage your core vertical spine poor balance unstable aiming platform inconsistent arrow placement vertically"
+    },
+    {
+      "id": "rec_aim_head_tilt_009",
+      "phase": "aim",
+      "category": "technique_error",
+      "joints_involved": [
+        "head"
+      ],
+      "metric": {
+        "name": "head_tilt",
+        "observable_range": [
+          -10,
+          10
+        ],
+        "ideal_range": [
+          -2,
+          2
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_frontal"
+      },
+      "error_name": "Head tilt",
+      "description": "Tilting the head laterally (left or right) can lead to inconsistent anchor points and a distorted sight picture, affecting aiming accuracy. (estimated)",
+      "root_causes": [
+        "Compensating for anchor point",
+        "Poor neck posture",
+        "Habit"
+      ],
+      "observable_signs": [
+        "Head angle deviating more than 5 degrees from vertical",
+        "Visible tilt of the head relative to the spine"
+      ],
+      "coaching_cues": [
+        "Head straight",
+        "Look through the sight",
+        "Keep your head still"
+      ],
+      "drill": {
+        "name": "Head Position Check",
+        "description": "Use a mirror or video feedback to ensure your head remains upright and still throughout the shot process, especially during anchor and aim.",
+        "reps": 0,
+        "focus_metric": "head_tilt"
+      },
+      "severity": "medium",
+      "score_impact": "Causes inconsistent anchor and sight alignment, leading to horizontal arrow dispersion and reduced accuracy.",
+      "related_entries": [
+        "rec_anchor_inconsistent_anchor_007"
+      ],
+      "embed_text": "aim head head_tilt -10-10 degrees head tilt head straight look through sight keep head still inconsistent anchor sight alignment horizontal arrow dispersion reduced accuracy"
+    },
+    {
+      "id": "rec_release_bow_arm_collapse_010",
+      "phase": "release",
+      "category": "technique_error",
+      "joints_involved": [
+        "bow_elbow",
+        "bow_shoulder"
+      ],
+      "metric": {
+        "name": "bow_arm_extension_angle",
+        "observable_range": [
+          140,
+          165
+        ],
+        "ideal_range": [
+          170,
+          175
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Bow arm collapse",
+      "description": "Bending the bow arm elbow prematurely during or immediately after release causes the bow to move erratically, negatively affecting arrow flight. (estimated)",
+      "root_causes": [
+        "Anticipation of recoil",
+        "Lack of follow-through discipline",
+        "Weak bow arm muscles"
+      ],
+      "observable_signs": [
+        "Bow_arm_extension_angle decreasing significantly (more flexion) from aim to follow-through",
+        "Visible bending of the bow elbow"
+      ],
+      "coaching_cues": [
+        "Hold your bow arm strong",
+        "Push through the shot",
+        "Maintain your form"
+      ],
+      "drill": {
+        "name": "Hold and Push Drill",
+        "description": "After releasing the arrow, consciously hold your bow arm in position for an extra 2-3 seconds, focusing on pushing towards the target.",
+        "reps": 10,
+        "focus_metric": "bow_arm_extension_angle"
+      },
+      "severity": "high",
+      "score_impact": "Leads to inconsistent arrow flight, poor grouping, and reduced accuracy due to bow movement during the critical launch phase.",
+      "related_entries": [],
+      "embed_text": "release bow_elbow bow_shoulder bow_arm_extension_angle 140-165 degrees bow arm collapse hold bow arm strong push through shot maintain form inconsistent arrow flight poor grouping reduced accuracy"
+    },
+    {
+      "id": "rec_follow_through_duration_011",
+      "phase": "follow_through",
+      "category": "technique_cue",
+      "joints_involved": [
+        "spine",
+        "bow_shoulder",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "follow_through_duration",
+        "observable_range": [
+          0.1,
+          0.5
+        ],
+        "ideal_range": [
+          1.5,
+          3.0
+        ],
+        "unit": "seconds",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Insufficient follow-through",
+      "description": "Not maintaining body position after release for a sufficient duration indicates a lack of control and can lead to premature collapse of form, affecting consistency. (estimated)",
+      "root_causes": [
+        "Rushing the shot",
+        "Anticipation of recoil",
+        "Lack of discipline"
+      ],
+      "observable_signs": [
+        "Body position (spine, shoulders) changing rapidly after release",
+        "Follow-through duration less than 1 second"
+      ],
+      "coaching_cues": [
+        "Hold your finish",
+        "Stay in the shot",
+        "Maintain your form until the arrow hits"
+      ],
+      "drill": {
+        "name": "Counted Follow-Through",
+        "description": "After each shot, count to three slowly before relaxing your form. Focus on maintaining all body positions (bow arm, draw hand, spine, head).",
+        "reps": 10,
+        "focus_metric": "follow_through_duration"
+      },
+      "severity": "medium",
+      "score_impact": "Contributes to inconsistent shot execution and form breakdown, leading to erratic arrow placement and reduced accuracy.",
+      "related_entries": [
+        "rec_release_bow_arm_collapse_010"
+      ],
+      "embed_text": "follow_through spine bow_shoulder draw_shoulder follow_through_duration 0.1-0.5 seconds insufficient follow-through hold your finish stay in the shot maintain your form until arrow hits inconsistent shot execution form breakdown erratic arrow placement reduced accuracy"
+    }
+  ]
+}

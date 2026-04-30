@@ -1,0 +1,357 @@
+{
+  "source_video": {
+    "title": "Archery Technique: Draw Arm Position",
+    "url": "https://www.youtube.com/watch?v=6F_MqIjNtKU&list=PLnGbQXzYstgG99o2VXblMr-lzHS38f2oV&index=5",
+    "coach_name": "Fivics Archery",
+    "discipline": "recurve",
+    "skill_level_target": "all"
+  },
+  "entries": [
+    {
+      "id": "rec_draw_elbow_high_001",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "draw_elbow_angle",
+        "observable_range": [
+          105,
+          150
+        ],
+        "ideal_range": [
+          90,
+          100
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "High draw elbow (\"chicken wing\")",
+      "description": "The draw elbow is positioned too high and often overly extended, causing the draw shoulder to rise and hindering proper back tension engagement. This creates an inefficient line of force. (estimated ranges)",
+      "root_causes": [
+        "Over-rotation of the shoulder",
+        "Trying to pull with arm muscles",
+        "Poor setup",
+        "Lack of back muscle awareness"
+      ],
+      "observable_signs": [
+        "Draw elbow angle (flexion) is greater than 100 degrees",
+        "Draw shoulder height is elevated relative to the bow shoulder"
+      ],
+      "coaching_cues": [
+        "Elbow in line with the arrow",
+        "Drop your elbow slightly",
+        "Feel your back muscles engage"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Leads to inconsistent anchor, poor string clearance, and reduced power transfer, causing vertical and horizontal inconsistencies.",
+      "related_entries": [
+        "rec_draw_shoulder_elevated_004",
+        "rec_draw_elbow_ideal_003"
+      ],
+      "embed_text": "draw anchor aim draw_elbow draw_shoulder draw_elbow_angle 105-150 degrees high draw elbow chicken wing elbow in line with arrow drop elbow feel back muscles inconsistent anchor poor string clearance reduced power vertical horizontal inconsistencies"
+    },
+    {
+      "id": "rec_draw_elbow_low_002",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "draw_elbow_angle",
+        "observable_range": [
+          60,
+          85
+        ],
+        "ideal_range": [
+          90,
+          100
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Low draw elbow",
+      "description": "The draw elbow is positioned too low and often overly flexed, which can lead to insufficient back tension, a collapsed draw arm, and an inefficient line of force. (estimated ranges)",
+      "root_causes": [
+        "Over-reliance on bicep",
+        "Trying to force the shoulder down too much",
+        "Poor posture",
+        "Lack of back muscle engagement"
+      ],
+      "observable_signs": [
+        "Draw elbow angle (flexion) is less than 90 degrees",
+        "Draw shoulder may be too low or forward"
+      ],
+      "coaching_cues": [
+        "Lift your elbow",
+        "Elbow in line with the arrow",
+        "Engage your back muscles"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Results in a weak and inconsistent anchor, difficulty achieving full draw length, and poor arrow flight due to lack of power and stability.",
+      "related_entries": [
+        "rec_draw_shoulder_collapsed_005",
+        "rec_draw_elbow_ideal_003"
+      ],
+      "embed_text": "draw anchor aim draw_elbow draw_shoulder draw_elbow_angle 60-85 degrees low draw elbow lift elbow elbow in line with arrow engage back muscles weak inconsistent anchor poor arrow flight lack of power stability"
+    },
+    {
+      "id": "rec_draw_elbow_ideal_003",
+      "phase": "draw",
+      "category": "technique_cue",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "draw_elbow_angle",
+        "observable_range": [
+          0,
+          0
+        ],
+        "ideal_range": [
+          90,
+          100
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Optimal draw elbow alignment",
+      "description": "The draw elbow should be aligned with the arrow, forming a straight line of force from the elbow through the hand to the string, facilitating efficient back tension and stability. (estimated ranges)",
+      "root_causes": [],
+      "observable_signs": [
+        "Draw elbow angle (flexion) is consistently between 90-100 degrees",
+        "The elbow is spatially aligned with the arrow's path"
+      ],
+      "coaching_cues": [
+        "Elbow in line with the arrow",
+        "Maintain a strong line of force",
+        "Feel the connection to your back"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "low",
+      "score_impact": "Promotes consistent anchor, efficient power transfer, and improved accuracy by maximizing back tension and shot stability.",
+      "related_entries": [
+        "rec_draw_elbow_high_001",
+        "rec_draw_elbow_low_002"
+      ],
+      "embed_text": "draw anchor aim draw_elbow draw_shoulder draw_elbow_angle 90-100 degrees optimal draw elbow alignment elbow in line with arrow maintain strong line consistent anchor efficient power improved accuracy"
+    },
+    {
+      "id": "rec_draw_shoulder_elevated_004",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_shoulder",
+        "spine"
+      ],
+      "metric": {
+        "name": "draw_shoulder_height_diff",
+        "observable_range": [
+          20,
+          50
+        ],
+        "ideal_range": [
+          -5,
+          5
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Elevated draw shoulder",
+      "description": "The draw shoulder is raised towards the ear during the draw and anchor, indicating tension in the neck and upper trapezius, which prevents proper engagement of the back muscles. (estimated ranges)",
+      "root_causes": [
+        "Tension",
+        "Trying to pull with arm/neck muscles",
+        "Incorrect setup",
+        "Poor posture"
+      ],
+      "observable_signs": [
+        "Draw shoulder height is significantly higher than the bow shoulder",
+        "Draw_shoulder_rise metric shows upward movement from setup to anchor"
+      ],
+      "coaching_cues": [
+        "Shoulder down and back",
+        "Relax your neck",
+        "Use your lats to pull"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "high",
+      "score_impact": "Causes significant inconsistency in anchor point and string clearance, leading to erratic arrow grouping and potential injury.",
+      "related_entries": [
+        "rec_draw_back_tension_principle_006"
+      ],
+      "embed_text": "draw anchor aim draw_shoulder spine draw_shoulder_height_diff 20-50mm elevated draw shoulder shrugging shoulder down back relax neck use lats inconsistent anchor erratic grouping injury"
+    },
+    {
+      "id": "rec_draw_shoulder_collapsed_005",
+      "phase": "draw",
+      "category": "technique_error",
+      "joints_involved": [
+        "draw_shoulder",
+        "spine"
+      ],
+      "metric": {
+        "name": "draw_shoulder_height_diff",
+        "observable_range": [
+          -50,
+          -10
+        ],
+        "ideal_range": [
+          -5,
+          5
+        ],
+        "unit": "mm",
+        "measurement_axis": "spatial"
+      },
+      "error_name": "Collapsed draw shoulder",
+      "description": "The draw shoulder rolls forward or drops excessively, losing the connection to the back muscles and compromising the skeletal alignment for stability and power. (estimated ranges)",
+      "root_causes": [
+        "Lack of back tension",
+        "Over-rotation of the torso",
+        "Trying to reach the anchor point",
+        "Poor posture"
+      ],
+      "observable_signs": [
+        "Draw shoulder height is significantly lower than the bow shoulder",
+        "Draw shoulder position is forward of the spine"
+      ],
+      "coaching_cues": [
+        "Squeeze your shoulder blades together",
+        "Open your chest",
+        "Shoulder back and down"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "medium",
+      "score_impact": "Leads to a weak and inconsistent anchor, reduced power, and difficulty maintaining a stable aim, resulting in poor grouping and vertical inconsistencies.",
+      "related_entries": [
+        "rec_draw_back_tension_principle_006"
+      ],
+      "embed_text": "draw anchor aim draw_shoulder spine draw_shoulder_height_diff -50 -10mm collapsed draw shoulder squeeze shoulder blades open chest shoulder back down weak inconsistent anchor reduced power poor grouping vertical inconsistencies"
+    },
+    {
+      "id": "rec_draw_back_tension_principle_006",
+      "phase": "draw",
+      "category": "principle",
+      "joints_involved": [
+        "draw_shoulder",
+        "spine"
+      ],
+      "metric": {
+        "name": "",
+        "observable_range": [
+          0,
+          0
+        ],
+        "ideal_range": [
+          0,
+          0
+        ],
+        "unit": "",
+        "measurement_axis": ""
+      },
+      "error_name": "Back tension principle",
+      "description": "Archery power and stability primarily come from engaging the large back muscles (rhomboids, latissimus dorsi) to pull the string, rather than relying on smaller arm muscles. This creates a stable platform for the shot.",
+      "root_causes": [],
+      "observable_signs": [
+        "Stable draw shoulder position",
+        "Minimal draw_shoulder_rise",
+        "Consistent draw_elbow_angle",
+        "Minimal spine movement during draw"
+      ],
+      "coaching_cues": [
+        "Pull with your back",
+        "Squeeze your shoulder blades",
+        "Feel your lats engage"
+      ],
+      "drill": {
+        "name": "",
+        "description": "",
+        "reps": 0,
+        "focus_metric": ""
+      },
+      "severity": "low",
+      "score_impact": "Essential for consistent shot execution, improved accuracy, and injury prevention by distributing load efficiently and creating a repeatable release.",
+      "related_entries": [
+        "rec_draw_shoulder_elevated_004",
+        "rec_draw_shoulder_collapsed_005"
+      ],
+      "embed_text": "draw anchor aim draw_shoulder spine back tension principle pull with back squeeze shoulder blades feel lats engage consistent shot execution improved accuracy injury prevention"
+    },
+    {
+      "id": "rec_draw_drill_alignment_007",
+      "phase": "draw",
+      "category": "drill",
+      "joints_involved": [
+        "draw_elbow",
+        "draw_shoulder"
+      ],
+      "metric": {
+        "name": "draw_elbow_angle",
+        "observable_range": [
+          0,
+          0
+        ],
+        "ideal_range": [
+          90,
+          100
+        ],
+        "unit": "degrees",
+        "measurement_axis": "3d_sagittal"
+      },
+      "error_name": "Draw arm alignment drill",
+      "description": "Practice drawing the bow slowly with a resistance band or in front of a mirror, focusing on bringing the draw elbow directly in line with the arrow and maintaining the draw shoulder down and back throughout the movement.",
+      "root_causes": [],
+      "observable_signs": [],
+      "coaching_cues": [
+        "Slow and controlled",
+        "Elbow to arrow",
+        "Shoulder down and back"
+      ],
+      "drill": {
+        "name": "Resistance Band Draw",
+        "description": "Using a resistance band, slowly execute the draw cycle, pausing at full draw to check elbow and shoulder alignment in a mirror. Focus on feeling back muscle engagement.",
+        "reps": 10,
+        "focus_metric": "draw_elbow_angle"
+      },
+      "severity": "low",
+      "score_impact": "Improves muscle memory for correct draw arm and shoulder position, leading to more consistent shot execution and better grouping over time.",
+      "related_entries": [
+        "rec_draw_elbow_ideal_003",
+        "rec_draw_shoulder_elevated_004"
+      ],
+      "embed_text": "draw anchor draw_elbow draw_shoulder draw_elbow_angle 90-100 degrees draw arm alignment drill resistance band draw slow controlled elbow to arrow shoulder down back muscle memory consistent shot execution better grouping"
+    }
+  ]
+}
