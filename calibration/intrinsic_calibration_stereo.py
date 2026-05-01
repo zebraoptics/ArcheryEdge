@@ -78,9 +78,9 @@ from typing import Optional
 # ─────────────────────────────────────────────
 BOARD_SQUARES_X  = 6
 BOARD_SQUARES_Y  = 9
-BOARD_SQUARE_SIZE = 0.0184   # metres (18.4 mm)
-BOARD_MARKER_SIZE = 0.01656  # metres (16.56 mm)
-BOARD_ARUCO_DICT  = "DICT_6X6_250"
+BOARD_SQUARE_SIZE = 0.03   # metres (18.4 mm)
+BOARD_MARKER_SIZE = 0.03 * 6.0 / 8.0  # metres (16.56 mm)
+BOARD_ARUCO_DICT  = "DICT_4X4_100"
 
 import cv2
 import cv2.aruco as aruco
@@ -531,6 +531,16 @@ def run_capture(args) -> None:
 
             disp = draw_coverage_hud(disp, tracker, last_metrics)
 
+            if args.display_scale != 1.0:
+                disp = cv2.resize(disp, None, fx=args.display_scale,
+                                  fy=args.display_scale,
+                                  interpolation=cv2.INTER_AREA)
+            if args.rotate == 90:
+                disp = cv2.rotate(disp, cv2.ROTATE_90_CLOCKWISE)
+            elif args.rotate == 180:
+                disp = cv2.rotate(disp, cv2.ROTATE_180)
+            elif args.rotate == 270:
+                disp = cv2.rotate(disp, cv2.ROTATE_90_COUNTERCLOCKWISE)
             cv2.imshow(f"Intrinsic calibration — CSI cam {args.camera_id}", disp)
             key = cv2.waitKey(1) & 0xFF
 
@@ -779,7 +789,18 @@ def run_verify(args) -> None:
             _text(combined, "Q=quit  S=snapshot", (10, h - 12), 0.45,
                   (150, 150, 150))
 
-            cv2.imshow(f"Verify intrinsics — CSI cam {args.camera_id}", combined)
+            disp_combined = combined
+            if args.display_scale != 1.0:
+                disp_combined = cv2.resize(combined, None, fx=args.display_scale,
+                                           fy=args.display_scale,
+                                           interpolation=cv2.INTER_AREA)
+            if args.rotate == 90:
+                disp_combined = cv2.rotate(disp_combined, cv2.ROTATE_90_CLOCKWISE)
+            elif args.rotate == 180:
+                disp_combined = cv2.rotate(disp_combined, cv2.ROTATE_180)
+            elif args.rotate == 270:
+                disp_combined = cv2.rotate(disp_combined, cv2.ROTATE_90_COUNTERCLOCKWISE)
+            cv2.imshow(f"Verify intrinsics — CSI cam {args.camera_id}", disp_combined)
             key = cv2.waitKey(1) & 0xFF
             if key == ord("q"):
                 break
@@ -848,6 +869,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--rational-model", action="store_true",
                    help="Use rational distortion model (8 coefficients) instead of "
                         "standard (5). Better for wide-angle lenses.")
+    p.add_argument("--display-scale", type=float, default=0.5,
+                   help="Scale factor for display window (1.0=full size, 0.5=half)")
+    p.add_argument("--rotate", type=int, default=0, choices=[0, 90, 180, 270],
+                   help="Rotate display image clockwise by degrees (display only)")
     p.add_argument("--debug", action="store_true")
 
     args = p.parse_args()
