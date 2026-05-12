@@ -1,6 +1,9 @@
 # code playground
 temp/
 
+# data
+data/
+
 # model weights (large binaries — download separately)
 models/
 

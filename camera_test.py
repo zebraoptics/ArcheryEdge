@@ -3,10 +3,12 @@ from utils import DualCameraConfig, CameraConfig, DualCSICamera
 
 
 # Apply 2x2 binning for higher frame rates at the cost of resolution. (Only for the IMX219 sensor.)
-config = DualCameraConfig(                                                                                                                                                                                                                                                            
-    cam0=CameraConfig(sensor_id=0, width=1640, height=1232, framerate=30, sensor_mode=3),
-    cam1=CameraConfig(sensor_id=1, width=1640, height=1232, framerate=30, sensor_mode=3),                                                                                                                                                                                             
-)  
+config = DualCameraConfig(
+    cam0=CameraConfig(sensor_id=0, width=1640, height=1232, framerate=30,
+                      sensor_mode=3, rotation=270),
+    cam1=CameraConfig(sensor_id=1, width=1640, height=1232, framerate=30,
+                      sensor_mode=3, rotation=90),
+)
 
 with DualCSICamera(config) as cams:
     print(f"Streaming — press 'q' to quit, 's' to save a snapshot pair.")
@@ -15,16 +17,11 @@ with DualCSICamera(config) as cams:
 
         if left is None or right is None:
             continue
-        
-        # Rotate to portrait orientation for display (optional, depends on camera mounting)
-        if left is not None:
-            left = cv2.rotate(left, cv2.ROTATE_90_COUNTERCLOCKWISE)
-        if right is not None:
-            right = cv2.rotate(right, cv2.ROTATE_90_CLOCKWISE)
 
-        # Downscale for display only
-        disp_left  = cv2.resize(left,  (480, 480 * config.cam0.width // config.cam0.height))
-        disp_right = cv2.resize(right, (480, 480 * config.cam1.width // config.cam1.height))
+        # Frames arrive upright thanks to CameraConfig.rotation.
+        h, w = left.shape[:2]
+        disp_left  = cv2.resize(left,  (480, 480 * h // w))
+        disp_right = cv2.resize(right, (480, 480 * h // w))
 
         # Overlay FPS
         for img, cam in [(disp_left, cams.cam0), (disp_right, cams.cam1)]:

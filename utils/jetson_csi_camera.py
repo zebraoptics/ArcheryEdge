@@ -24,6 +24,12 @@ class CameraConfig:
     sensor_mode: int = -1  # IMX219: -1=auto, 0=3280x2464, 1=3280x1848, 2=1920x1080,
                            #         3=1640x1232(2x2bin), 4=1640x922(2x2bin),
                            #         5=1280x720(2x2bin@60), 6=1280x720(2x2bin@120)
+    # Clockwise rotation in degrees applied to every frame returned by read().
+    # Use this to make the camera output upright when the sensor is physically
+    # mounted on its side. Distinct from flip_method (which is a GStreamer
+    # pipeline option for in-driver transforms). All downstream consumers —
+    # calibration, stereo, application — see post-rotation frames.
+    rotation: int = 0      # 0, 90, 180, or 270
 
 
 def _gstreamer_pipeline(cfg: CameraConfig) -> str:
@@ -43,8 +49,19 @@ def _gstreamer_pipeline(cfg: CameraConfig) -> str:
 class CSICamera:
     """Single CSI camera stream."""
 
+    _ROTATION_CODES = {
+        90:  cv2.ROTATE_90_CLOCKWISE,
+        180: cv2.ROTATE_180,
+        270: cv2.ROTATE_90_COUNTERCLOCKWISE,
+    }
+
     def __init__(self, config: CameraConfig):
+        if config.rotation not in (0, 90, 180, 270):
+            raise ValueError(
+                f"CameraConfig.rotation must be 0, 90, 180, or 270 — got {config.rotation}"
+            )
         self.config = config
+        self._rotate_code = self._ROTATION_CODES.get(config.rotation)
         self._cap: Optional[cv2.VideoCapture] = None
         self._frame: Optional[np.ndarray] = None
         self._frame_time: Optional[float] = None  # monotonic timestamp of latest frame
@@ -81,6 +98,8 @@ class CSICamera:
             ret, frame = self._cap.read()
             if not ret:
                 continue
+            if self._rotate_code is not None:
+                frame = cv2.rotate(frame, self._rotate_code)
             now = time.monotonic()
             with self._lock:
                 self._frame = frame

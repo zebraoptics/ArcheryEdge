@@ -420,6 +420,13 @@ class CalibFrame:
 # ─────────────────────────────────────────────
 
 
+# Per-camera mounting rotation (clockwise degrees needed to make the raw
+# sensor frame upright). cam0 is mounted rotated -90° (needs 270 CW), cam1 is
+# mounted +90° (needs 90 CW). Calibration runs on upright frames so K, D are
+# expressed in the same orientation everything downstream uses.
+_CAMERA_ROTATION = {0: 270, 1: 90}
+
+
 def _make_csi_config(args) -> CameraConfig:
     return CameraConfig(
         sensor_id=args.camera_id,
@@ -428,6 +435,7 @@ def _make_csi_config(args) -> CameraConfig:
         framerate=args.fps,
         flip_method=args.flip_method,
         sensor_mode=args.sensor_mode,
+        rotation=_CAMERA_ROTATION.get(args.camera_id, 0),
     )
 
 
@@ -535,12 +543,6 @@ def run_capture(args) -> None:
                 disp = cv2.resize(disp, None, fx=args.display_scale,
                                   fy=args.display_scale,
                                   interpolation=cv2.INTER_AREA)
-            if args.rotate == 90:
-                disp = cv2.rotate(disp, cv2.ROTATE_90_CLOCKWISE)
-            elif args.rotate == 180:
-                disp = cv2.rotate(disp, cv2.ROTATE_180)
-            elif args.rotate == 270:
-                disp = cv2.rotate(disp, cv2.ROTATE_90_COUNTERCLOCKWISE)
             cv2.imshow(f"Intrinsic calibration — CSI cam {args.camera_id}", disp)
             key = cv2.waitKey(1) & 0xFF
 
@@ -794,12 +796,6 @@ def run_verify(args) -> None:
                 disp_combined = cv2.resize(combined, None, fx=args.display_scale,
                                            fy=args.display_scale,
                                            interpolation=cv2.INTER_AREA)
-            if args.rotate == 90:
-                disp_combined = cv2.rotate(disp_combined, cv2.ROTATE_90_CLOCKWISE)
-            elif args.rotate == 180:
-                disp_combined = cv2.rotate(disp_combined, cv2.ROTATE_180)
-            elif args.rotate == 270:
-                disp_combined = cv2.rotate(disp_combined, cv2.ROTATE_90_COUNTERCLOCKWISE)
             cv2.imshow(f"Verify intrinsics — CSI cam {args.camera_id}", disp_combined)
             key = cv2.waitKey(1) & 0xFF
             if key == ord("q"):
@@ -871,8 +867,6 @@ def parse_args() -> argparse.Namespace:
                         "standard (5). Better for wide-angle lenses.")
     p.add_argument("--display-scale", type=float, default=0.5,
                    help="Scale factor for display window (1.0=full size, 0.5=half)")
-    p.add_argument("--rotate", type=int, default=0, choices=[0, 90, 180, 270],
-                   help="Rotate display image clockwise by degrees (display only)")
     p.add_argument("--debug", action="store_true")
 
     args = p.parse_args()
