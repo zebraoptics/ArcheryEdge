@@ -71,7 +71,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("stereo_calib")
 
-# ── Board constants — must match intrinsic_calibration_stereo.py ──────────────
+# ── Board constants — must match intrinsic_calibration_stereo.py ────────────
 BOARD_SQUARES_X   = 6
 BOARD_SQUARES_Y   = 9
 BOARD_SQUARE_SIZE = 0.03          # metres

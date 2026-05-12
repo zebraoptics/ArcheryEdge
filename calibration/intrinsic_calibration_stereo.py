@@ -12,7 +12,7 @@ Workflow
 
 2. Run in CALIBRATE mode to process saved frames and output intrinsics.
 
-3. Run in VERIFY mode to visually confirm undistortion on a live feed.
+3. Run in VERIFY mode to visually confirm undistortion on a live feed.  
 
 Outputs
 -------
