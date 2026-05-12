@@ -20,6 +20,7 @@ Usage
 
     smoother = make_smoother('one_euro', fps=30.0)
     smoothed_xy = smoother.smooth(raw_xy)   # raw_xy: np.ndarray (K, 2)
+    good luck!
 """
 
 import math
