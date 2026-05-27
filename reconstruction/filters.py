@@ -14,7 +14,6 @@ not need to be specified at construction time.
 
 Usage
 -----
-::
 
     from reconstruction.filters import make_smoother
 
